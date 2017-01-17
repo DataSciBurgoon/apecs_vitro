@@ -183,6 +183,7 @@ public class EventHandlerController implements Initializable{
 //            			out.newLine();
 //            			out.write(chemicalCorrelation.getChemicalname() + ",true" + "," + distance + "," + ae1 + "," + ae2);
 //            			System.out.println(chemicalCorrelation.getChemicalname() + ",true" + "," + distance + "," + ae1 + "," + ae2);
+            			lowjob.add("id", q);
             			lowjob.add("chemical_name", chemicalCorrelation.getChemicalname());
             			lowjob.add("is_estrogenic", true);
             			lowjob.add("distance", distance);
@@ -199,6 +200,7 @@ public class EventHandlerController implements Initializable{
 //            			out.newLine();
 //            			out.write(chemicalCorrelation.getChemicalname() + ",false" + "," + distance + "," + ae1 + "," + ae2);
 //            			System.out.println(chemicalCorrelation.getChemicalname() + ",false" + "," + distance + "," + ae1 + "," + ae2);
+            			lowjob.add("id", q);
             			lowjob.add("chemical_name", chemicalCorrelation.getChemicalname());
             			lowjob.add("is_estrogenic", false);
             			lowjob.add("distance", distance);

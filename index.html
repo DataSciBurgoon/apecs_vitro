@@ -115,20 +115,25 @@ d3.json("estrogen_results.json", function(error, data) {
       .style("text-anchor", "end")
       .text("AE2");
 
+  var gdots =  svg.selectAll("g.dot")
+            .data(data)
+            .enter().append('g');
+
   // draw dots
-  svg.selectAll(".dot")
-      .data(data)
-    .enter().append("circle")
+  //svg.selectAll(".dot")
+  gdots.append("circle")
+  //    .data(data)
+  //  .enter().append("circle")
       .attr("class", "dot")
       .attr("r", 3.5)
       .attr("cx", xMap)
       .attr("cy", yMap)
       .style("fill", function(d) { return color(cValue(d));}) 
-      .on("mouseover", function(d) {
+      /*.on("mouseover", function(d) {
           tooltip.transition()
                .duration(200)
                .style("opacity", .9);
-          tooltip.html(d.chemical_name)
+          tooltip.html(d.id)
                .style("left", (d3.event.pageX + 5) + "px")
                .style("top", (d3.event.pageY-15) + "px");
       })
@@ -136,8 +141,22 @@ d3.json("estrogen_results.json", function(error, data) {
           tooltip.transition()
                .duration(500)
                .style("opacity", 0);
-      });
+      })*/;
+  /*svg.selectAll(".dot")
+      .data(data)
+      .enter().append("text")
+      .text(function(d){
+        return d.id;
+      })
+      .attr("cx", xMap)
+      .attr("cy", yMap)
+*/
 
+  gdots.append("text").text(function(d){
+    return d.id;
+  })
+  .attr("x", xMap)
+  .attr("y", yMap);
   // draw legend
   var legend = svg.selectAll(".legend")
       .data(color.domain())
