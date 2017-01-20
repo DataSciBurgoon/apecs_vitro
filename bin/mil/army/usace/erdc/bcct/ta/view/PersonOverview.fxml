@@ -31,36 +31,33 @@
             <Image url="@USACE_logo.png" />
          </image>
       </ImageView>
-      <TableView fx:id="resultTable" layoutX="14.0" layoutY="337.0" prefHeight="238.0" prefWidth="318.0">
+      <TableView fx:id="resultTable" layoutX="14.0" layoutY="232.0" prefHeight="343.0" prefWidth="318.0">
         <columns>
             <TableColumn fx:id="columnID" prefWidth="28.999969482421875" text="ID" />
           <TableColumn fx:id="columnName" prefWidth="117.0" text="Chemical Name" />
           <TableColumn fx:id="columnEstrogenic" prefWidth="171.0" text="Estrogenic?" />
         </columns>
       </TableView>
-      <Text layoutX="14.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save Image" />
-      <Text layoutX="14.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Save Table" />
-      <Button layoutX="131.0" layoutY="112.0" mnemonicParsing="false" text="Browse" />
-      <Button layoutX="131.0" layoutY="160.0" mnemonicParsing="false" text="Browse" />
-      <Line endX="230.0" layoutX="100.0" layoutY="196.0" startX="-100.0" />
-      <Text layoutX="14.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APECS (in vitro) predicts if a chemical is estrogenic using a deep learning autoencoder. This model was trained on ground truth estrogenic and non-estrogenic chemicals from in vitro assays." wrappingWidth="267.86865234375" />
+      <Line endX="230.0" layoutX="102.0" layoutY="102.0" startX="-100.0" />
+      <Text layoutX="14.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APECS (in vitro) predicts if a chemical is estrogenic using a deep learning autoencoder. This model was trained on ground truth estrogenic and non-estrogenic chemicals from in vitro assays." wrappingWidth="307.86865234375" />
       <Text layoutX="10.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Predict Estrogenic Chemicals Using HTS Data" />
-      <Text layoutX="10.0" layoutY="606.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A product of the US Army Bioinformatics and Computational Toxicology Group, US Army Engineer Research and Development Center, US Army Corps of Engineers. Supported by the US Army Environmental Quality and Installations Program" wrappingWidth="280.82666056696326">
+      <Text layoutX="18.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A product of the US Army Bioinformatics and Computational Toxicology Group, US Army Engineer Research and Development Center, US Army Corps of Engineers. Supported by the US Army Environmental Quality and Installations Program" wrappingWidth="280.82666056696326">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="214.0" layoutY="666.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: Lyle D. Burgoon, Ph.D." wrappingWidth="260.21875">
+      <Text layoutX="309.0" layoutY="603.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: Lyle D. Burgoon, Ph.D." wrappingWidth="260.21875">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
-      <Text layoutX="214.0" layoutY="689.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email: lyle.d.burgoon@usace.army.mil" wrappingWidth="260.2187502011657">
+      <Text layoutX="309.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email: lyle.d.burgoon@usace.army.mil" wrappingWidth="260.2187502011657">
          <font>
             <Font size="10.0" />
          </font>
       </Text>
       <Line endX="-101.0" endY="215.0" layoutX="433.0" layoutY="53.0" startX="-101.0" startY="-1.0" />
       <WebView fx:id="webView" layoutX="332.0" layoutY="50.0" prefHeight="527.0" prefWidth="1007.0" />
+      <Text layoutX="373.0" layoutY="734.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version: 1.0.1" />
    </children>
 </AnchorPane>
