@@ -123,8 +123,10 @@ public class AssayData {
 		List<Pair<Double, Double>> tempResponses = new ArrayList<Pair<Double, Double>>();
 		List<Pair<Double, Double>> tempResponsesForAvg = new ArrayList<Pair<Double, Double>>();
 		double responseHolder = 0.0;
+		double logcHolder = 0.0;
 		for(Pair<Double, Double> pairedData : this.pairedResponses){
 			if(valuesSeen.isEmpty()){
+				logcHolder = pairedData.getFirst();
 				valuesSeen.add(pairedData.getFirst());
 				tempResponses.add(new Pair<Double, Double>(new Double(pairedData.getFirst()), new Double(pairedData.getSecond())));
 				responseHolder += pairedData.getSecond().doubleValue();
@@ -138,14 +140,19 @@ public class AssayData {
 			}
 			else{
 				valuesSeen.add(pairedData.getFirst());
-				responseHolder += pairedData.getSecond().doubleValue();
+//				responseHolder += pairedData.getSecond().doubleValue();
 				double avgResponse = responseHolder / howManyTimes;
 				howManyTimes = 1;
 				tempResponses.add(new Pair<Double, Double>(new Double(pairedData.getFirst()), new Double(pairedData.getSecond())));
-				tempResponsesForAvg.add(new Pair<Double, Double>(new Double(pairedData.getFirst()), new Double(avgResponse)));
-				responseHolder = 0.0;
+				tempResponsesForAvg.add(new Pair<Double, Double>(new Double(logcHolder), new Double(avgResponse)));
+				responseHolder = pairedData.getSecond();
+				logcHolder = pairedData.getFirst();
 			}
 		}
+		
+//		tempResponses.add(new Pair<Double, Double>(new Double(pairedData.getFirst()), new Double(pairedData.getSecond())));
+		double avgResponse = responseHolder / howManyTimes;
+		tempResponsesForAvg.add(new Pair<Double, Double>(new Double(logcHolder), new Double(avgResponse)));
 		
 		for(Pair<Double, Double> pairedData : tempResponses){
 			//System.out.println(pairedData.getFirst().doubleValue());
