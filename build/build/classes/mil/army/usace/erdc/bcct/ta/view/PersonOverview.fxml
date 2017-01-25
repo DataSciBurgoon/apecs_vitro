@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="751.0" prefWidth="1339.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="mil.army.usace.erdc.bcct.ta.view.EventHandlerController">
+   <children>
+      <Button fx:id="fileOpenButton" layoutX="131.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleSubmitButtonAction" text="Browse" />
+      <Text layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Input File" />
+      <Line endX="1240.0" layoutX="101.0" layoutY="50.0" startX="-100.0" />
+      <Text layoutX="10.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APECS (in vitro): Autoencoder Predicting Estrogenic Chemical Substances">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="89.0" fitWidth="78.0" layoutX="14.0" layoutY="648.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logos_whitebg.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="89.0" fitWidth="107.0" layoutX="97.0" layoutY="656.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@USACE_logo.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="resultTable" layoutX="14.0" layoutY="232.0" prefHeight="343.0" prefWidth="318.0">
+        <columns>
+            <TableColumn fx:id="columnID" prefWidth="28.999969482421875" text="ID" />
+          <TableColumn fx:id="columnName" prefWidth="117.0" text="Chemical Name" />
+          <TableColumn fx:id="columnEstrogenic" prefWidth="171.0" text="Estrogenic?" />
+        </columns>
+      </TableView>
+      <Line endX="230.0" layoutX="102.0" layoutY="102.0" startX="-100.0" />
+      <Text layoutX="14.0" layoutY="149.0" strokeType="OUTSIDE" strokeWidth="0.0" text="APECS (in vitro) predicts if a chemical is estrogenic using a deep learning autoencoder. This model was trained on ground truth estrogenic and non-estrogenic chemicals from in vitro assays." wrappingWidth="307.86865234375" />
+      <Text layoutX="10.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Predict Estrogenic Chemicals Using HTS Data" />
+      <Text layoutX="18.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A product of the US Army Bioinformatics and Computational Toxicology Group, US Army Engineer Research and Development Center, US Army Corps of Engineers. Supported by the US Army Environmental Quality and Installations Program" wrappingWidth="280.82666056696326">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="309.0" layoutY="603.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Contact: Lyle D. Burgoon, Ph.D." wrappingWidth="260.21875">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Text layoutX="309.0" layoutY="626.0" strokeType="OUTSIDE" strokeWidth="0.0" text="email: lyle.d.burgoon@usace.army.mil" wrappingWidth="260.2187502011657">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Text>
+      <Line endX="-101.0" endY="215.0" layoutX="433.0" layoutY="53.0" startX="-101.0" startY="-1.0" />
+      <WebView fx:id="webView" layoutX="332.0" layoutY="50.0" prefHeight="527.0" prefWidth="1007.0" />
+      <Text layoutX="373.0" layoutY="734.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version: 1.0.1" />
+   </children>
+</AnchorPane>

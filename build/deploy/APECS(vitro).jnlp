@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="APECS(vitro).jnlp">
+  <information>
+    <title>APECS(vitro)</title>
+    <vendor>US Army Engineer Research and Development Center</vendor>
+    <description>Sample JavaFX 2.0 application.</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <jfx:javafx-runtime version="2.2+" href="http://javadl.sun.com/webapps/download/GetFile/javafx-latest/windows-i586/javafx2.jnlp"/>
+  </resources>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="APECS(vitro).jar" size="69279" download="eager" />
+    <jar href="libs/commons-math3-3.6.1.jar" size="2213560" download="eager" />
+    <jar href="libs/javax.json-1.0.4.jar" size="85147" download="eager" />
+    <jar href="libs/junit.jar" size="314932" download="eager" />
+    <jar href="libs/org.hamcrest.core_1.3.0.v201303031735.jar" size="55198" download="eager" />
+  </resources>
+  <applet-desc  width="0" height="0" main-class="com.javafx.main.NoJavaFXFallback"  name="APECS (vitro)" >
+    <param name="requiredFXVersion" value="2.2+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="0" height="0" main-class="mil.army.usace.erdc.bcct.ta.MainApp"  name="APECS (vitro)" />
+  <update check="background"/>
+</jnlp>
